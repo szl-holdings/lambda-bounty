@@ -1,0 +1,9 @@
+# Lean / Lake build artifacts
+/.lake/
+/lake-packages/
+/build/
+*.olean
+*.ilean
+*.trace
+_AxiomCheck.lean
+axioms.txt
