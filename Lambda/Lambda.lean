@@ -64,6 +64,19 @@ fixed point of A1–A4 under the agentic composition operator).
 NOTE: This is the bounty target. It is stated with `sorry` and is **NOT** a
 theorem until a submission discharges the `sorry` using ONLY the allowlisted
 axioms (Allowed_Axioms.lean). Do not remove the `sorry` without a real proof.
+
+HONEST SOUNDNESS CAVEAT (do NOT delete — this is the flagship honesty example).
+As stated, A1–A4 ALONE do not single out the geometric mean: `min` satisfies all
+four (min of a constant vector is that constant; monotone; permutation-invariant;
+any 0 input forces 0) yet `min ≠ geometric mean`. So a fully general proof of
+this exact statement is impossible — the conjecture in this literal form is
+refuted by the `min` counterexample (Aczél 1966; Kolmogorov–Nagumo–de Finetti
+1930–31; t-norm theory: `min` is the unique idempotent t-norm). A *provable*
+uniqueness theorem additionally needs continuity + bisymmetry/associativity +
+homogeneity (or multiplicativity), after which the n-D Cauchy step (`CAUCHY_ND`)
+closes. Tightening the axiom set (e.g. adding `A5_Bisymmetric`, `A6_Continuous`,
+`A7_Homogeneous`) is a FOUNDER decision; until then the bounty stands as an
+honest open problem under public axiom audit, and `main` legitimately stays red.
 -/
 theorem lambda_aggregator_unique
     (Λ₁ Λ₂ : Aggregator)
