@@ -22,6 +22,11 @@
 ================================================================================
 -/
 
+-- `Function.Bijective` (used by A3_Symmetric below) lives in Mathlib, not Lean
+-- core. The lakefile already requires Mathlib @ v4.13.0; this import makes the
+-- symbol resolvable so `lake build` is green. Kept narrow (Function.Basic only).
+import Mathlib.Logic.Function.Basic
+
 namespace Lambda
 
 /-- A trust vector: 9 axis scores, each a rational in the closed unit interval.
